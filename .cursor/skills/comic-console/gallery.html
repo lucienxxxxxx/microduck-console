@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>comic console components</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@700&family=Noto+Sans+SC:wght@700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="tokens.css" />
+    <link rel="stylesheet" href="components.css" />
+    <style>
+      body { margin: 0; min-height: 100vh; }
+      .board { display: grid; gap: 28px; padding: 28px; }
+      .specimen { display: grid; gap: 10px; }
+      .specimen > p {
+        margin: 0;
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="board">
+      <section class="specimen">
+        <p>BrandLockup · Eyebrow · Chip</p>
+        <header class="cc-top">
+          <a class="cc-brand" href="#"><span>microduck</span></a>
+          <p class="cc-eyebrow"><i></i> 非官方改装台 · 先配色再打印</p>
+          <div class="cc-chips"><span class="cc-chip">25 CM</span><span class="cc-chip">15 电机</span></div>
+        </header>
+      </section>
+
+      <section class="specimen">
+        <p>Ticker</p>
+        <div class="cc-ticker">
+          <div class="cc-ticker-track">
+            <span>大粗字 · 黑边 · 先上色再贴纸</span>
+            <span>外壳、嘴、脚分开走线</span>
+            <span>大粗字 · 黑边 · 先上色再贴纸</span>
+            <span>外壳、嘴、脚分开走线</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="specimen">
+        <p>Panel · Display · Pill · Swatch · ZoneRow · BlockButton</p>
+        <section class="cc-panel" style="box-shadow: var(--shadow-panel)">
+          <h1 class="cc-display">上色。</h1>
+          <p class="cc-lead">左右零件共用一个色区。这是打印前的分盘预览。</p>
+          <div class="cc-row">
+            <button class="cc-pill is-on" type="button">官网实机</button>
+            <button class="cc-pill" type="button">夜行</button>
+          </div>
+          <div class="cc-row" style="margin: 10px 0">
+            <button class="cc-swatch" style="background:#ffd22f" type="button"></button>
+            <button class="cc-swatch" style="background:#ff6b2b" type="button"></button>
+            <button class="cc-swatch" style="background:#ff4fa3" type="button"></button>
+            <button class="cc-swatch" style="background:#2de1d1" type="button"></button>
+            <button class="cc-swatch" style="background:#0d0e11" type="button"></button>
+          </div>
+          <div class="cc-stack">
+            <div class="cc-zone is-on">
+              <input type="color" value="#f4f1e6" aria-label="外壳颜色" />
+              <span><b>外壳</b><small>头壳、侧壳、大腿 · 5 件</small></span>
+              <small>#F4F1E6</small>
+            </div>
+            <div class="cc-zone">
+              <input type="color" value="#ffd22f" aria-label="嘴巴颜色" />
+              <span><b>嘴巴</b><small>硬喙 · 1 件</small></span>
+              <small>#FFD22F</small>
+            </div>
+          </div>
+          <div class="cc-row" style="margin-top: 12px">
+            <button class="cc-pill is-on" type="button">哑光</button>
+            <button class="cc-pill" type="button">丝绸</button>
+            <button class="cc-pill" type="button">金属</button>
+          </div>
+          <button class="cc-block" type="button" style="margin-top: 10px">导出配色单</button>
+        </section>
+      </section>
+
+      <section class="specimen">
+        <p>Stage · StickerNote · Loading · Status</p>
+        <section class="cc-stage">
+          <div class="cc-stage-canvas"></div>
+          <div class="cc-chip cc-stage-note">拖拽转一圈</div>
+          <div class="cc-load"><strong>WADDLE</strong><span>正在把鸭子装上工作台</span><b></b></div>
+          <div class="cc-stage-actions">
+            <button class="cc-pill" type="button">截一张</button>
+            <span class="cc-status">点零件选色区</span>
+          </div>
+        </section>
+      </section>
+
+      <section class="specimen">
+        <p>StickerTile · SliderRow · PlacedList</p>
+        <section class="cc-panel">
+          <h1 class="cc-display accent">贴纸。</h1>
+          <p class="cc-lead">选一张，再点在模型上。贴纸会贴在点中的那块零件。</p>
+          <div class="cc-row">
+            <button class="cc-tile is-on" type="button">QUACK</button>
+            <button class="cc-tile" type="button">斜纹</button>
+            <button class="cc-tile" type="button">星星</button>
+          </div>
+          <label class="cc-slider">尺寸 <input type="range" min="12" max="80" value="36" /></label>
+          <label class="cc-slider">旋转 <input type="range" min="-180" max="180" value="-8" /></label>
+          <button class="cc-block is-on" type="button">贴纸模式：QUACK</button>
+          <ol class="cc-placed"><li>QUACK <button class="cc-mini" type="button">撕掉</button></li></ol>
+          <button class="cc-block ghost" type="button">撕掉全部贴纸</button>
+        </section>
+      </section>
+    </div>
+  </body>
+</html>

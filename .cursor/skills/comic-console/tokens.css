@@ -1,0 +1,37 @@
+/* 唯一色板。组件不得再写死新的颜色、字号或阴影。
+   分层对应 W3C Design Tokens：这里是 primitive，组件只消费这些名字。 */
+:root {
+  --ink: #0d0e11;
+  --paper: #f3efe3;
+  --yellow: #ffd22f;
+  --orange: #ff6b2b;
+  --pink: #ff4fa3;
+  --teal: #2de1d1;
+  --lavender: #bba4dc;
+  --white: #fffdf8;
+  --muted: #4d4942;
+  --footer: #514d46;
+
+  --font-display: "Archivo Black", "Noto Sans SC", Impact, "Arial Black", sans-serif;
+  --font-body: "Noto Sans SC", Inter, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  --border-chip: 3px;
+  --border-panel: 4px;
+  --radius-pill: 999px;
+  --radius-swatch: 8px;
+  --radius-block: 14px;
+
+  --shadow-panel: 7px 7px 0 var(--ink);
+  --shadow-ticker: 0 4px 0 var(--ink);
+  --shadow-mark: 3px 3px 0 var(--ink);
+
+  --tilt-ticker: -0.7deg;
+  --tilt-title: -1.5deg;
+  --tilt-note: -6deg;
+  --tilt-sticker: -3deg;
+
+  color: var(--ink);
+  background: var(--paper);
+  font-family: var(--font-body);
+}

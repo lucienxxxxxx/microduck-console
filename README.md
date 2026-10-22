@@ -15,6 +15,8 @@ npm run dev
 
 浏览器打开 http://127.0.0.1:5173/
 
+界面规范在 `.cursor/skills/comic-console/`。打开同目录的 `gallery.html` 可以看参考组件。
+
 ## 许可
 
 改装台代码是 MIT。鸭子网格和 `public/assembly.json` 是 Pollen Robotics 的作品，CC BY-NC-SA 4.0，不能商用。署名见 [NOTICE.md](NOTICE.md)。
