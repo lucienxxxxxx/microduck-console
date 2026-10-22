@@ -1,0 +1,20 @@
+MicroDuck 改装台采用两套许可，互不覆盖。
+
+## 改装台代码
+
+除下面单独列出的模型文件外，本仓库中的原创代码（页面、样式、脚本、构建配置）以 MIT License 授权。
+
+https://opensource.org/licenses/MIT
+
+Copyright (c) 2026 lucian
+
+## 鸭子网格与装配数据
+
+以下文件不是本仓库原创，不能按 MIT 使用：
+
+- `public/models/*.stl`
+- `public/assembly.json`
+
+它们来自 Pollen Robotics 的 microduck_rl，版权归 Pollen Robotics，许可为 CC BY-NC-SA 4.0。详见 NOTICE.md。
+
+https://creativecommons.org/licenses/by-nc-sa/4.0/

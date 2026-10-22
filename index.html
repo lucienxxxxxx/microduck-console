@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>microduck 改装台</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@500;700&family=Noto+Sans+SC:wght@700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="top">
+        <a class="brand" href="https://microduck.net/" target="_blank" rel="noreferrer">
+          <img src="/brand/duck-head.webp" alt="" onerror="this.remove()" />
+          <span>microduck</span>
+        </a>
+        <p class="eyebrow"><i></i> 非官方改装台 · 先配色再打印</p>
+        <div class="chips">
+          <span>25 CM</span>
+          <span>15 电机</span>
+          <span>零恐惧</span>
+        </div>
+      </header>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>大粗字 · 黑边 · 先上色再贴纸</span>
+          <span>外壳、嘴、脚分开走线</span>
+          <span>点在鸭子身上就贴住</span>
+          <span>哑光 PLA / 丝绸 / 金属预览</span>
+          <span>模型来自 Pollen Robotics</span>
+          <span>大粗字 · 黑边 · 先上色再贴纸</span>
+          <span>外壳、嘴、脚分开走线</span>
+          <span>点在鸭子身上就贴住</span>
+          <span>哑光 PLA / 丝绸 / 金属预览</span>
+          <span>模型来自 Pollen Robotics</span>
+        </div>
+      </div>
+
+      <main class="workspace">
+        <section class="panel paint-panel">
+          <h1>上色。</h1>
+          <p class="panel-lead">左右零件共用一个色区。这是打印前的分盘预览。</p>
+          <div class="preset-row" id="presets"></div>
+          <div class="swatches" id="swatches"></div>
+          <div class="zones" id="zones"></div>
+          <div class="finish" id="finish">
+            <button type="button" data-finish="matte" class="is-on">哑光</button>
+            <button type="button" data-finish="silk">丝绸</button>
+            <button type="button" data-finish="metal">金属</button>
+          </div>
+          <button type="button" class="block-btn" id="export-colors">导出配色单</button>
+        </section>
+
+        <section class="stage">
+          <canvas id="view"></canvas>
+          <div class="stage-note">拖拽转一圈</div>
+          <div class="load" id="load">
+            <strong>WADDLE</strong>
+            <span id="load-text">正在把鸭子装上工作台</span>
+            <b id="load-bar"></b>
+          </div>
+          <div class="stage-actions">
+            <button type="button" id="shot">截一张</button>
+            <span id="status">点零件选色区</span>
+          </div>
+        </section>
+
+        <section class="panel sticker-panel">
+          <h1>贴纸。</h1>
+          <p class="panel-lead">选一张，再点在模型上。贴纸会贴在点中的那块零件。</p>
+          <div class="sticker-grid" id="sticker-grid"></div>
+          <label class="slider">尺寸 <input id="sticker-size" type="range" min="12" max="80" value="36" /></label>
+          <label class="slider">旋转 <input id="sticker-rot" type="range" min="-180" max="180" value="-8" /></label>
+          <button type="button" class="block-btn" id="sticker-arm">贴纸模式：关</button>
+          <ol class="placed" id="placed"></ol>
+          <button type="button" class="block-btn ghost" id="clear-stickers">撕掉全部贴纸</button>
+        </section>
+      </main>
+
+      <footer>
+        网格 © Pollen Robotics · CC BY-NC-SA 4.0 · 未改 STL，只烘焙了官方 STAND 姿态 · 与 Pollen Robotics 无关
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
